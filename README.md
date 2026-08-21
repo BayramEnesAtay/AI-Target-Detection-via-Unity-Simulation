@@ -5,7 +5,16 @@ Bu proje, bilgisayarlı görü (computer vision) ve nesne tespiti (object detect
 ## Projenin Amacı
 
 Savunma sanayii ve taktiksel saha uygulamalarında, makine öğrenmesi modellerini eğitmek için farklı açılardan, çeşitli ışık koşullarında ve zengin arka planlarda çekilmiş yeterli miktarda gerçek askeri araç (tank, zırhlı araç vb.) verisine ulaşmak zor ve maliyetlidir. Bu projenin temel amacı, veri kıtlığı (data scarcity) problemini çözmek için Unity Perception paketini kullanarak %100 sentetik, otomatik etiketlenmiş ve domain adaptasyonuna uygun devasa veri setleri üretmektir.
+Aşağıdaki görsel, Unity Perception kamerası tarafından rastgele aydınlatma ve açı parametreleriyle üretilmiş ham bir sentetik veriyi (step0.camera.png) temsil etmektedir:
 
+![Unity Raw Synthetic Output](Gorsel_Sonuclar/step0.camera.png)
+
+## Otomatik Etiketleme
+
+Üretilen sentetik veriler, YOLO formatına dönüştürüldükten sonra modelin eğitim ve doğrulama (validation) aşamalarında kullanılır. Aşağıdaki görsel, sistemin hedefleri (bounding box) otomatik olarak ne kadar yüksek bir hassasiyetle çizdiğini ve YOLO formatına aktardığını göstermektedir:
+
+![Validation Batch Labels](Gorsel_Sonuclar/val_batch2_labels.jpg)
+*(Otonom olarak etiketlenmiş ve YOLO veri setine dönüştürülmüş sentetik eğitim verilerinden bir kesit)*
 ## Mevcut Durum ve Gelecek Hedefleri
 
 Proje şu anda aktif geliştirme aşamasındadır . v1.0 sürümü ile temel sentetik veri üretimi ve YOLOv8 entegrasyonu başarıyla tamamlanmıştır.
